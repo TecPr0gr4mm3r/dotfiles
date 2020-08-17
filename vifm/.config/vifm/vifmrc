@@ -1,0 +1,90 @@
+" vim: filetype=vifm :
+set vicmd=nvim
+" set vicmd=elvis\ -G\ termcap
+" set vicmd=vile
+set syscalls
+set trash
+set history=100
+set nofollowlinks
+" unambiguous beginning using :! (e.g. :!Te instead of :!Terminal or :!Te<tab>).
+set fastrun
+set sortnumbers
+set undolevels=100
+set vimhelp
+set norunexec
+colorscheme Default
+set timefmt=%m/%d\ %H:%M
+set wildmenu
+set wildstyle=popup
+set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
+set ignorecase
+set smartcase
+set nohlsearch
+set incsearch
+set scrolloff=4
+if !has('win')
+    set slowfs=curlftpfs
+endif
+set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+
+mark b ~/bin/
+mark h ~/
+:highlight Normal ctermfg=grey ctermbg=darkblue
+" %a is replaced with the user arguments.
+" %c the current file under the cursor.
+" %C the current file under the cursor in the other directory.
+" %f the current selected file, or files.
+" %F the current selected file, or files in the other directory.
+" %b same as %f %F.
+" %d the current directory name.
+" %D the other window directory name.
+" %m run the command in a menu window
+
+command! df df -h %m 2> /dev/null
+command! diff vim -d %f %F
+command! zip zip -r %f.zip %f
+command! run !! ./%f
+command! mkcd :mkdir %a | cd %a
+command! vgrep vim "+grep %a"
+command! reload :write | restart
+command! stow :!stow %f
+
+filextype * ~/.exts/v %c
+set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
+    \phistory,fhistory,dirstack,registers,bookmarks,bmarks
+
+nnoremap q :quit <cr>
+nnoremap i :! sxiv . -t &<cr>
+nnoremap r :rename <cr>
+nnoremap R :restart <cr>
+nnoremap S :sort<cr>
+nnoremap w :view<cr>
+vnoremap w :view<cr>gv
+nnoremap gb :file &<cr>l
+
+if has('win')
+    nnoremap yp :!echo %"d:gs!\!/! %i | clip<cr>
+    nnoremap yf :!echo %"c:gs!\!/! %i | clip<cr>
+elseif executable('xclip')
+    nnoremap yd :!echo %d | xclip %i<cr>
+    nnoremap yf :!echo %c:p | xclip %i<cr>
+elseif executable('xsel')
+    nnoremap yd :!echo -n %d | xsel --input --primary %i &&
+                \ echo -n %d | xsel --clipboard --input %i<cr>
+    nnoremap yf :!echo -n %c:p | xsel --input --primary %i &&
+                \ echo -n %c:p | xsel --clipboard --input %i<cr>
+endif
+
+nnoremap I cw<c-a>
+nnoremap cc cw<c-u>
+nnoremap A cw
+nnoremap ,t :!xterm &<cr>
+nnoremap ,c :write | edit $MYVIFMRC | restart<cr>
+nnoremap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
+nnoremap ,w :set wrap!<cr>
+nnoremap <f3> :!less %f<cr>
+nnoremap <f4> :edit<cr>
+nnoremap <f5> :copy<cr>
+nnoremap <f6> :move<cr>
+nnoremap <f7> :mkdir<space>
+nnoremap <f8> :delete<cr>

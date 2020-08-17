@@ -1,0 +1,9 @@
+XTerm.termName: xterm-256color
+*.background: #282A36
+*.foreground: #ffffff
+XTerm*faceName: DejaVu Sans Mono
+XTerm*faceSize: 12
+XTerm*highlightSelection: true
+XTerm*trimSelection: true
+Xterm*saveLines:1000
+Xterm*selectToClipboard: true

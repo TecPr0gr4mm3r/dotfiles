@@ -1,0 +1,12 @@
+#!/bin/sh
+while read file
+do
+        case "$1" in
+        "d") trash-put  "$file" ;;
+        "p") convert "$file" ~/.config/wall.jpg && ~/dotfiles/exts/setbg ;;
+        "m")
+        [ -z "$dir" ] && dir="$(fd --type d . /home/dgu| rofi -dmenu -i -l 10 )"
+        [ -z "$dir" ] && exit
+        mv "$file" "$dir";;
+        esac
+done

@@ -1,0 +1,137 @@
+/regions=uscagb
+#British vocabulary
+loo/3
+aeroplane/3
+jumper/3
+taxi/3
+trainers/3
+handbag/3
+rubbish/3
+bin/3
+
+#rare words
+bestest/?
+
+#bad words
+just/!
+very/!
+absolutely/!
+completely/!
+literally/!
+totally/!
+definitely/!
+free gift/!
+past history/!
+final outcome/!
+end result/!
+true fact/!
+decided to/!
+honestly/!
+really/!
+
+#filter words
+that/?
+then/?
+amazing/?
+stuff/?
+much/?
+only/?
+even/?
+probably/?
+certainly/?
+currently/?
+now/?
+actually/?
+basically/?
+practically/?
+simply/?
+truly/?
+virtually/?
+almost/?
+nearly/?
+appeared/?
+seemed/?
+I believe/?
+I think/?
+was/?
+were/?
+I'm/?
+he's/?
+she's/?
+we're/?
+so/?
+quite/?
+rather/?
+somewhat/?
+somehow/?
+begin to/?
+began to/?
+begun to/?
+start to/?
+started to/?
+although/?
+though/?
+however/?
+maybe/?
+perhaps/?
+sort/?
+sorta/?
+kinda/?
+little/?
+there/?
+here/?
+things/?
+in color/?
+at this point in time/?
+due to the fact/?
+in spite of the fact/?
+that's why/?
+by means of/?
+at all times/?
+in order to/?
+because of the fact that/?
+which is/?
+decide to/?
+once again/?
+causing/?
+and with that/?
+'ve been/?
+'s been/?
+'ve/?
+'s/?
+many/?
+few/?
+are/?
+is/?
+but/?
+when/?
+and/?
+because/?
+cuz/?
+usually/?
+obviously/?
+still/?
+
+#good words
+gunna
+fingerlings
+tryna
+coulda
+shoulda
+nah
+mic
+Wikipedia
+wordsmith
+juvii
+why's
+unceasable
+diss
+I'ma
+noosy
+enounced
+monophongs
+chedda
+Arkham
+Who'da
+backstabbed
+fuckboys

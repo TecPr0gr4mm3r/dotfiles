@@ -1,0 +1,57 @@
+[global]
+    class = Dunst
+    corner_radius = 0
+    dmenu = /usr/bin/dmenu -p dunst:
+    ellipsize = middle
+    follow = mouse
+    font = Monospace 11
+    force_xinerama = false
+    frame_color = "#2380E7"
+    frame_width = 1
+    geometry = "500x0-0-0"
+    hide_duplicate_count = true
+    history_length = 5
+    horizontal_padding = 8
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_position = right
+    idle_threshold = 120
+    ignore_newline = no
+    indicate_hidden = yes
+    line_height = 1
+    alignment = left
+    markup = no
+    monitor = 0
+    mouse_left_click = do_action
+    mouse_middle_click = close_current
+    mouse_right_click = close_all
+    padding = 8
+    separator_color = frame
+    separator_height = 2
+    show_age_threshold = 60
+    max_icon_size = 500
+	show_indicators = yes
+    stack_duplicates = true
+    startup_notification = false
+    sticky_history = yes
+    title = Dunst
+    transparency = 0
+    verbosity = mesg
+    word_wrap = yes
+[urgency_low]
+    background = "#1C1C1C"
+    foreground = "#B9B9B9"
+    alignment = center
+    timeout = 2
+[urgency_normal]
+    background = "#1C1C1C"
+    foreground = "#B9B9B9"
+    alignment = center
+    timeout = 2
+[urgency_critical]
+    background = "#1C1C1C"
+    foreground = "#B9B9B9"
+    frame_color = "#ff0000"
+    alignment = left
+[albumart]
+    summary = "*Mpd*"
+    timeout = 2
