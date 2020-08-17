@@ -3,7 +3,7 @@ alt {_,shift + } Return
 			{st,st -c CenterTerminal}
 
 alt + o ; {w,p,t,v,a}
-		{Google-chrome,pcmanfm ~,telegram-desktop,st -e vifm ~,Waveform11}&
+		{Google-chrome,pcmanfm ~,telegram-desktop,st -e vifm ~,reaper}&
 
 alt + {d,r,p}
 		rofi -show {drun,run,window} -show-icons
