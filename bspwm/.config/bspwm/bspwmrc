@@ -31,9 +31,6 @@ bspc config active_border_color "#1e1e1e"
 bspc config presel_feedback_color "#5e81ac"
 bspc config urgent_border_color "#dd2727"
 
-#bspc subscribe desktop_focus | while read line; do notify-send "Current desktop:$(bspc query -D -d focused --names)"; done &
-
-## Applications
 
 # Floating
 bspc rule -a CenterTerminal state=floating
@@ -45,6 +42,7 @@ bspc rule -a Leafpad state=floating state=private
 bspc rule -a Ardour-5.12.0 state=floating state=private
 bspc rule -a QjackCtl state=floating
 bspc rule -a Onboard state=floating
+bspc rule -a Jack-keyboard state=floating
 bspc rule -a Zathura state=tiled
 
 # terminal
@@ -75,6 +73,5 @@ bspc rule -a TelegramDesktop desktop='^7'
 
 #Audio studio
 bspc rule -a Hydrogen desktop='^8' follow=on
-bspc rule -a REAPER desktop='^8' follow=on
+bspc rule -a REAPER desktop='^8' follow=on state=floating
 bspc rule -a Ardour desktop='^9' follow=on
-bspc rule -a waveform11 desktop='^9' follow=on
