@@ -1,0 +1,17 @@
+# dwm
+This is my personal dwm fork.
+
+## Keybindings
+
+Description | Keybindings
+-|-
+Spawn dmenu_run | alt + d
+Spawn st | alt + Enter
+Spawn st in the center | Alt + shift + Enter
+Open power dialog |Alt + shift + e
+Show the number of words in the selected text| Alt +shift +w
+Toggle pulse audio | shift + m
+Turn volume up/down | shift + u/d
+Toggle mpc audio | shift + p
+Kill client | alt + q
+Toggle floating | alt +f
