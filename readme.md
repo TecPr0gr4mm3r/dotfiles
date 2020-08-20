@@ -1,6 +1,6 @@
 # Minimalist studio Rice
 
-![](https://wallpapercave.com/wp/lmf9BZk.jpg)
+![](https://i.pinimg.com/originals/7e/79/46/7e79467588333ff2148982b308f3d588.jpg)
 Type| App
 -|-
 💽 | Arch BTW |
