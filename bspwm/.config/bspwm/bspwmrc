@@ -4,7 +4,10 @@
 pgrep xautolock | xautolock -time 5 -locker "amixer set Master mute && slock" &
 #pgrep sxhkd | sxhkd &
 pgrep polybar | polybar -r bar &
-
+st &
+st&
+st &
+rofi -show drun &
 ## Rules
 bspc rule -r "*"
 bspc monitor -d 1 2 3 4 5 6 7 8 9

@@ -10,7 +10,3 @@ qjackctl &
 sxhkd &
 bspwm
 
-#while :; do
-#	ssh-agent dwm
-#done
-#awesome

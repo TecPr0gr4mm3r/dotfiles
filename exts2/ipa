@@ -1,0 +1,49 @@
+#!/bin/sh
+Symbols="
+–  | -
+dʒ | dj
+tʃ | ch
+·  | .
+ə  | uh
+ä  | a
+ɛ - | ae
+æ  | ae
+d̪  | dth
+ð  | dth
+ɛɨ | ei
+ē  | ee
+äɨ  | ai
+ŋ  | ng
+oʉ  | ow
+äʉ | aw
+ɔ  | o
+ɐ | 'uh
+ɔɨ | oi
+ɛ  | eh
+ɪ  | ih
+ɫ  | dark l
+ɱ  | mf
+ɸ  | f]
+ɹ  | rr
+ɾ  | dd
+ʃ  | sh
+ʊ  | uh
+ʒ  | zh
+ʔ  | glottal ?
+ʰ  | h_
+β  | v]
+θ  | th
+—  | --
+→  | ->
+n̩ | n
+ɻ | rr
+ɖ | dd
+ɳ | nn
+ɽ | dd
+ɨ | i-
+ʉ | uh-
+ɵ | oh
+oo | uu
+"
+echo "$Symbols" | dmenu -i -l 10 | awk '{print $1}' | tr -d '\n' | xclip -selection clipboard
+notify-send "$(xclip -o -selection clipboard) copied to clipboard"

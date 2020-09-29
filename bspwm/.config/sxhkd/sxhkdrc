@@ -2,9 +2,6 @@
 alt {_,shift + } Return
 			{st,st -c CenterTerminal}
 
-alt + o ; {w,p,t,v,a}
-		{Google-chrome,pcmanfm ~,telegram-desktop,st -e vifm ~,Waveform11}&
-
 alt + {d,r,p}
 		rofi -show {drun,run,window} -show-icons
 
@@ -22,7 +19,7 @@ alt + {g,y}
 shift + e
 		rofi -show emoji
 shift + {p,w}
-		~/dotfiles/exts/{pauseaudio,wp}
+		~/dotfiles/exts/{pauseaudio,wp,ipa}
 
 shift {u,d,m}
 		amixer set Master {3+,3-,toggle};
