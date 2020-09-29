@@ -2,8 +2,8 @@
 alt {_,shift + } Return
 			{st,st -c CenterTerminal}
 
-alt + {d,r,p}
-		rofi -show {drun,run,window} -show-icons
+alt + {d,r,p,e}
+		rofi -show {drun,run,window,emoji} -show-icons
 
 alt + n
 		rofisearcher
@@ -11,15 +11,13 @@ alt + s
 		scrot -b -d 5 '%Y:%m:%d:%H:%M:%S.png'
 
 alt + shift {e,w,n}
-		~/dotfiles/exts/{logout,words} &
+		~/dotfiles/exts/{logout,words,ipa} &
 
 alt + {g,y}
 		~/dotfiles/exts/{class,yt}
 
-shift + e
-		rofi -show emoji
-shift + {p,w}
-		~/dotfiles/exts/{pauseaudio,wp,ipa}
+shift + {p,w,n}
+		~/dotfiles/exts/{pauseaudio,wp}
 
 shift {u,d,m}
 		amixer set Master {3+,3-,toggle};

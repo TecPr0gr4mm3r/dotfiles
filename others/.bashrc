@@ -40,6 +40,8 @@ alias bp="ln -s ~/dotfiles/others/.profile ~/.bash_profile"
 alias lc="ls | wc -l"
 alias cam="mpv /dev/video0"
 alias screenbrigh="xrandr --output eDP-1 --brightness "
+alias bsu="bspc wm -r"
+alias sxhu="pkill -USR1 -x sxhkd"
 function vf(){
 	fd --type f . '/home/dgu' | fzf | xargs -r -I {} ~/dotfiles/exts/v "{}"
 }
