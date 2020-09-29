@@ -1,0 +1,5 @@
+#!/bin/sh
+while mpc current --wait >/dev/null;do
+				ffmpeg -hide_banner -loglevel panic -y -i ~/Music/"$(mpc current -f %file%)" -an -vcodec copy /tmp/cover.jpg && notify-send -i /tmp/cover.jpg "Artist: $(mpc current -f %artist%)"$'\n'"Title:$(mpc current -f %title%)"
+		mpc play &>/dev/null
+done

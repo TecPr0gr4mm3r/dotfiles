@@ -7,10 +7,10 @@ numlockx on &
 qjackctl &
 ~/dotfiles/exts/setbg
 #megasync &
-#sxhkd &
-#bspwm
+sxhkd &
+bspwm
 
-while :; do
-	ssh-agent dwm
-done
+#while :; do
+#	ssh-agent dwm
+#done
 #awesome

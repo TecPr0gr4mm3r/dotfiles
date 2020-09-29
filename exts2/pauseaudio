@@ -1,0 +1,3 @@
+#!/bin/sh
+pgrep audacious && audacious --pause
+pgrep mpc && mpc toggle

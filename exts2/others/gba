@@ -1,0 +1,2 @@
+#!/bin/sh
+ls ~/Documents/Rooms/gba/*.gba | rofi -dmenu | xargs -r -I "{}" mgba-qt {}

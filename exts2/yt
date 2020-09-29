@@ -1,0 +1,13 @@
+#!/bin/sh
+url="$(xclip -o)"
+cd ~/Downloads/ || exit
+
+options="$(printf "🎵 Download audio\n📼 Download video\n🖼 Download thumbnail\n📹 Open it with mpv" | rofi -dmenu)"
+
+[ "$options" = "🎵 Download audio" ] && notify-send "⬇ Downloading audio" && youtube-dl -x -f bestaudio --audio-format vorbis -o '$HOME/Downloads/Music/%(title)s.%(ext)s' "$url" && notify-send "📼 Video has been Downloaded!"
+
+[ "$options" =  "📼 Download video" ] &&  notify-send "⬇ Downloading video" &&  youtube-dl -f best -o '$HOME/Downloads/Videos/%(title)s.%(ext)s' "$url" && notify-send "🎵 Song has been Downloaded!"
+
+[ "$options" = "🖼 Download thumbni ] &&  notify-send "⬇ Downloading thumbnail" && youtube-dl --write-thumbnail --skip-download -o '$HOME/Downloads/Pictures/%(title)s.%(ext)s'} "$url" && notify-send "🖼 Thumbnail has been Downloaded!"
+
+[ "$options" = "📹 Open it with mpv" ] && notify-send "📹 Open it with mpv" && mpv "$url" &

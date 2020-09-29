@@ -1,0 +1,2 @@
+#!/bin/sh
+identify -format "%w:%h:%f\n" * | awk -F : '$1<1920 || $2<1080{print $3}' | xargs -r -I "{}" rm {}

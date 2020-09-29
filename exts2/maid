@@ -1,0 +1,6 @@
+#!/bin/sh
+sudo pacman -Syu --overwrite='*'
+yay
+sudo pacman -Rsn $(pacman -Qtdq) && echo "Listing unnecessary packages"
+echo "Wiping out cache and history" && sudo pacman -Sc --noconfirm >/dev/null 2>&1
+echo "$(find ~ -type d -empty -print -delete | wc -l) empty folders deleted."

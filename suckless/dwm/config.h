@@ -11,7 +11,7 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
-static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
+static const char *fonts[]          = { "monospace:size=10" };
 static const char col_gray1[]       = "#000000"; /* Non-activated bar background */
 static const char col_gray2[]       = "#000000"; /* Non-activated window border */
 static const char col_gray3[]       = "#C0C0C0"; /* Non-activated bar background */
@@ -53,10 +53,10 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "📄",      tile },    /* first entry is default */
-	{ "✈",      NULL },    /* no layout function means floating behavior */
-	{ "🌕",      monocle },
-	{ "🔳",      gaplessgrid },
+	{ "t",      tile },    /* first entry is default */
+	{ "f",      NULL },    /* no layout function means floating behavior */
+	{ "m",      monocle },
+	{ "g",      gaplessgrid },
 };
 
 /* key definitions */

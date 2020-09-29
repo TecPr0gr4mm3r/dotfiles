@@ -1,0 +1,5 @@
+#!/bin/sh
+cd ~/dotfiles/suckless/dwm || exit
+sudo rm config.h; rm *.orig; rm *.rej; sudo make clean;
+sudo make clean install || exit
+pkill dwm && notify-send "Dwm succesfully restarted"

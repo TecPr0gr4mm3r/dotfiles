@@ -1,0 +1,16 @@
+#!/bin/sh
+#cd ~/dotfiles/suckless/dwm || exit
+#sudo make clean >/dev/null 2>&1
+#cd ~/dotfiles/suckless/dmenu || exit
+#rm *.rej; sudo make clean >/dev/null 2>&1
+cd ~/dotfiles/suckless/st || exit
+sudo make clean >/dev/null 2>&1
+#cd ~/dotfiles/suckless/dwmblocks || exit
+#sudo make clean >/dev/null 2>&1
+#cd ~/dotfiles/audacious/.config/audacious/ || exit
+#sudo rm -r lyrics playlists >/dev/null 2>&1
+cd ~/dotfiles/vifm/.config/vifm || exit
+sudo rm -r vifminfo vifm-help.txt scripts
+rm ~/dotfiles/nvim/.config/nvim/.netrwhist
+cd ~/dotfiles/
+git status .

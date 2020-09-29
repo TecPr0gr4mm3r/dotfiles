@@ -1,0 +1,9 @@
+#!/bin/sh
+for i in *.jpg; do cwebp -q 75 "$i" -o "$i".webp;done
+for i in *.jpeg; do cwebp -q 75 "$i" -o "$i".webp;done
+for i in *.png; do cwebp -q 75 "$i" -o "$i".webp;done
+
+
+rm *.jpg
+rm *.png
+rm *.jpeg
