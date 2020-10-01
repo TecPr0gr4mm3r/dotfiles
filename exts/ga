@@ -3,8 +3,8 @@
 #sudo make clean >/dev/null 2>&1
 #cd ~/dotfiles/suckless/dmenu || exit
 #rm *.rej; sudo make clean >/dev/null 2>&1
-cd ~/dotfiles/suckless/st || exit
-sudo make clean >/dev/null 2>&1
+#cd ~/dotfiles/suckless/st || exit
+#sudo make clean >/dev/null 2>&1
 #cd ~/dotfiles/suckless/dwmblocks || exit
 #sudo make clean >/dev/null 2>&1
 #cd ~/dotfiles/audacious/.config/audacious/ || exit
