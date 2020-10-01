@@ -1,9 +1,7 @@
 #!/bin/sh
-
 ## Startup
 pgrep xautolock | xautolock -time 5 -locker "amixer set Master mute && slock" &
-#pgrep sxhkd | sxhkd &
-pgrep polybar | polybar -r bar &
+
 ## Rules
 bspc rule -r "*"
 bspc monitor -d 1 2 3 4 5 6 7 8 9
@@ -30,18 +28,15 @@ bspc config active_border_color "#1e1e1e"
 bspc config presel_feedback_color "#5e81ac"
 bspc config urgent_border_color "#dd2727"
 
-#bspc subscribe desktop_focus | while read line; do notify-send "Current desktop:$(bspc query -D -d focused --names)"; done &
-
 ## Applications
 
 # Floating
 bspc rule -a CenterTerminal state=floating
-bspc rule -a st state=floating
 bspc rule -a Lxappearance state=floating
 bspc rule -a Galculator state=floating
 bspc rule -a MEGAsync state=floating
 bspc rule -a Leafpad state=floating state=private
-bspc rule -a Ardour-5.12.0 state=floating state=private
+bspc rule -a Ardour-6.3.0 state=floating state=private
 bspc rule -a QjackCtl state=floating
 bspc rule -a Onboard state=floating
 bspc rule -a Zathura state=tiled
@@ -50,7 +45,7 @@ bspc rule -a Zathura state=tiled
 bspc rule -a Subl3 desktop='^1' follow=on
 
 # Browser
-bspc rule -a firefox desktop='^2' follow=on state=private
+bspc rule -a Firefox desktop='^2' follow=on state=private
 bspc rule -a Chromium desktop='^2' follow=on state=private
 bspc rule -a Brave-browser desktop='^2' follow=on state=private
 bspc rule -a Google-chrome desktop='^2' follow=on state=private
@@ -59,11 +54,11 @@ bspc rule -a Google-chrome desktop='^2' follow=on state=private
 bspc rule -a Gimp desktop='^4' follow=on
 
 # video
-bspc rule -a kdenlive desktop='^5' follow=on
+bspc rule -a Kdenlive desktop='^5' follow=on
 bspc rule -a Olive desktop='^5' follow=on
 
 #entertainment
-bspc rule -a stremio desktop='^6' follow=on
+bspc rule -a Stremio desktop='^6' follow=on
 bspc rule -a Audacious desktop='^6' follow=on
 
 #Internet
@@ -76,4 +71,4 @@ bspc rule -a TelegramDesktop desktop='^7'
 bspc rule -a Hydrogen desktop='^8' follow=on
 bspc rule -a REAPER desktop='^8' follow=on
 bspc rule -a Ardour desktop='^9' follow=on
-bspc rule -a waveform11 desktop='^9' follow=on
+bspc rule -a Waveform11 desktop='^9' follow=on

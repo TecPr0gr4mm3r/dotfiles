@@ -5,10 +5,8 @@ alt {_,shift + } Return
 alt + {d,r,p,e}
 		rofi -show {drun,run,window,emoji} -show-icons
 
-alt + n
-		rofisearcher
-alt + s
-		scrot -b -d 5 '%Y:%m:%d:%H:%M:%S.png'
+alt + {s,n}
+		{scrot -b -d 5 '%Y:%m:%d:%H:%M:%S.png',rofisearcher}
 
 alt + shift {e,w,n}
 		~/dotfiles/exts/{logout,words,ipa} &

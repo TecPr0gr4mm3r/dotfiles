@@ -7,6 +7,7 @@ numlockx on &
 qjackctl &
 ~/dotfiles/exts/setbg
 #megasync &
+polybar -r bar &
 sxhkd &
 bspwm
 
