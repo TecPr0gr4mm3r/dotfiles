@@ -1,5 +1,4 @@
 #!/bin/sh
-#Adapted to the NCVS dialect.
 Symbols="
 –  | -
 dʒ | dj
@@ -7,19 +6,10 @@ tʃ | ch
 ə  | uh
 ä  | a
 ɛ | e
-ɚ  | ur 
-ɑ˞ | ar
-ɔ˞ | or
 eə  | ea
 ð  | dth
-ā | ei
-ē  | ee
-ī   | ai
 ŋ  | ng
-ō  | ow
-äʉ | aw
-ɒ  | o
-ɔɪ | oi
+ɑ| o
 ɪ | ih
 ɫ  | l
 ɱ  | m]
@@ -34,9 +24,6 @@ eə  | ea
 β  | v]
 θ  | th
 —  | --
-→  | ->
-n̩ | n
-ɵ | oh
-"
+→  | ->"
 echo "$Symbols" | dmenu -i -l 10 | awk '{print $1}' | tr -d '\n' | xclip -selection clipboard
 notify-send "$(xclip -o -selection clipboard) copied to clipboard"
