@@ -72,3 +72,4 @@ bspc rule -a Hydrogen desktop='^8' follow=on
 bspc rule -a REAPER desktop='^8' follow=on
 bspc rule -a Ardour desktop='^9' follow=on
 bspc rule -a Waveform11 desktop='^9' follow=on
+bspc rule -a Qtractor state=floating
