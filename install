@@ -1,1 +1,1 @@
-pacman -Syu imagemagick xwallpaper sxiv
+pacman -Syu imagemagick xwallpaper sxiv fd fzf exa

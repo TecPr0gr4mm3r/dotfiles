@@ -20,7 +20,6 @@ set bg=dark
 set clipboard+=unnamedplus
 set clipboard=unnamed
 set complete+=k
-set dictionary+=/home/dgu/dotfiles/nvim/dics/words.txt
 set encoding=utf-8
 set expandtab
 set go=a
@@ -37,15 +36,12 @@ set relativenumber
 set showmatch
 set sidescroll=1
 set softtabstop=4
-set spell! spelllang=en_us
 set splitbelow splitright
 set synmaxcol=500
 set tabstop=4
 set termguicolors
 set wildmenu
 set wildmode=longest,list,full
-
-"Activate table mode with trigger + tm
 
 filetype indent on
 hi CursorLineNr ctermfg=Green
@@ -54,7 +50,6 @@ syntax on
 
 imap ;null >/dev/null 2>&1
 imap ;ssh #!/bin/sh
-imap <leader>b -----------------------------------------------------------------------------
 inoremap <F2> <C-X><C-K>
 map <C-k> "+P
 map <Leader>c 1z=
@@ -63,7 +58,6 @@ map <Leader>o z=
 map <leader>e :silent! !chmod 777 %<CR>
 map <leader>q :q!<CR>
 map <leader>w :w!<CR>
-map t :setlocal spell! spelllang=en_us<CR>
 vnoremap <C-c> "*y :let @+=@*<CR>
 
 
@@ -71,7 +65,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufWritePost *.Xresources,*Xdefaults !xrdb ~/.Xresources
 autocmd BufWritePost *bspwmrc :silent! !bspc wm -r &
 autocmd BufWritePost *dunstrc :silent! !killall dunst &
-autocmd BufWritePost *en.utf-8.add :mkspell! %
 autocmd BufWritePost *sxhkdrc :silent! !pkill -USR1 -x sxhkd &
 autocmd BufWritePre * $put _ | $;?\(^\s*$\)\@!?+1,$d
 autocmd BufWritePre * :silent! %s/\s\+$//e
